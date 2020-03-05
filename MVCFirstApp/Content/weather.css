@@ -1,0 +1,51 @@
+﻿body {
+    background-image: url('https://images.unsplash.com/photo-1511184150666-9bb7d41a88f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ table th {
+    text-align: left;
+    background-color: lightskyblue;
+}
+
+
+.forecastHeader {
+    text-align: center;
+    margin-top: 5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.submitButton {
+    padding: 7px;
+    margin: 10px 10px 10px 10px;
+    background-color: lightblue;
+    box-shadow: 0 9px #999;
+    border: 3px solid ;
+}
+
+    .submitButton:hover {
+        background-color: #3e8e41
+    }
+
+    .submitButton:active {
+        background-color: #3e8e41;
+        box-shadow: 0 1px ;
+       
+    }
+
+.backButton {
+    padding: 7px;
+    margin: 10px 10px 10px 10px;
+    background-color: lightgreen;
+    box-shadow: 0 9px #999;
+    border: 3px solid;
+}
+
+.backButton:hover, a:hover {
+    background-color: lightgray;
+}
+
+.backButton:active, a:hover {
+    background-color: lightgray;
+    box-shadow: 0 1px;
+}

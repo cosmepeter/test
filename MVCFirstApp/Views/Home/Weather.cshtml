@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "weather";
+}
+
+    <body>
+        <h3 class="weatherHeader">input region</h3>
+        <form action="/home/weatherForecast" method="get">
+            <input class="weatherText" name="region" type="text" placeholder="address" />
+            <asp:TextBox ID="txtCity" runat="server" Text="" />
+            <button class="btn btn-primary">search!</button>
+
+        </form>
+
+        <asp:TextBox ID="txtCity"   Text="" />
+
+
+    </body>

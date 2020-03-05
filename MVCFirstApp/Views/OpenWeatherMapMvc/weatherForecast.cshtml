@@ -1,0 +1,70 @@
+﻿@model IEnumerable<MVCFirstApp.Models.Region>
+@{
+    Layout = "";
+}
+
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - My ASP.NET Application</title>
+        @Styles.Render("~/Content/weather.css")
+        <link href="https://fonts.googleapis.com/css?family=Poppins|Trade+Winds&display=swap" rel="stylesheet">
+
+
+    </head>
+
+    <body>
+
+        <h1 class="forecastHeader">Weather Forecast for today!</h1>
+        @if (ViewBag.Message != null)
+        {<h3>Here is your information~</h3>
+
+            <table style="width:100%">
+                <tr>
+                    <th>City</th>
+                    <th>Weather description</th>
+                    <th>temperature</th>
+                    <th>visibility</th>
+                    <th>wind speed</th>
+
+                </tr>
+
+                @foreach (var data in @ViewBag.Message)
+                {
+                    <tr>
+                        <td>@data.name</td>
+                        <td>@data.weather[0].description</td>
+                        <td>@data.main.temp</td>
+                        <td>@data.visibility</td>
+                        <td>@data.wind.speed</td>
+
+                    </tr>
+                }
+
+            </table>
+
+        }
+
+    <div>
+        <h4>Select the City for Weather Report</h4>
+
+        @using (Html.BeginForm("weatherForecast", "openWeatherMapMVC", FormMethod.Post))
+        {
+
+            foreach (var place in Model)
+            {
+                <input type="checkbox" id="@place.cityId" name="@place.name" value="@place.cityId">
+                <label for="@place.cityId">@place.name</label>
+                <br>
+            }
+            <button class="submitButton">Submit</button>
+        }
+        
+        <p><a class="btn btn-default" href="/">Back to home page</a></p>
+    </div>
+
+    </body>
+ 
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
