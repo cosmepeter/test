@@ -1,0 +1,53 @@
+﻿@model IEnumerable<tb_discount>
+@{
+    Layout = null;
+     
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+
+        .Grid {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+            .Grid th {
+                background-color: #F7F7F7;
+                font-weight: bold;
+            }
+
+            .Grid th, .Grid td {
+                padding: 5px;
+                border: 1px solid #ccc;
+            }
+
+            .Grid, .Grid table td {
+                border: 0px solid #ccc;
+            }
+    </style>
+</head>
+<body>
+    @using (Html.BeginForm("Authentication", "Login", FormMethod.Post))
+    {
+
+        <input class="name" name="name" type="text" placeholder="username" />
+        <input class="password" name="password" type="password" placeholder="password" />
+        <button class="btn btn-success">submit</button>
+         
+    }
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿ 
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    
+     
+</head>
+<body>
+
+    <h1>create new employee!</h1>
+    @using (Html.BeginForm("Create", "Employee", FormMethod.Post))
+    {
+
+        <input class="Name" name="Name" type="text" placeholder="Employee name" />
+
+        <input class="Age" name="Age" type="text" placeholder="Employee age" />
+        <button class="btn btn-success">submit</button>
+
+    }
+
+
+
+
+</body>
+</html>
