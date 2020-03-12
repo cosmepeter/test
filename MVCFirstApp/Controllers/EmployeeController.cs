@@ -12,9 +12,11 @@ namespace MVCSimpleApp.Controllers
 
         public ActionResult Index()
         {
-            var employees = from e in db.Employees
+            var employees =  from e in db.Employees
                             orderby e.ID
                             select e;
+
+            
             return View(employees);
         }
 

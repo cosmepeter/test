@@ -255,8 +255,10 @@
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LearnDBController.cs" />
-    <Compile Include="Controllers\OpenWeatherMapMvcController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\LogoutController.cs" />
+    <Compile Include="Controllers\OpenWeatherMapMvcController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="CustomersModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -276,6 +278,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Class\Class1.cs" />
+    <Compile Include="Models\Categories\Skincare.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Region.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -570,14 +575,17 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\OpenWeatherMapMvc\openWeatherMap.cshtml" />
     <Content Include="Views\LearnDB\Index.cshtml" />
-    <Content Include="Views\Login\LoginForm.cshtml" />
+    <Content Include="Views\Order\OrderForm.cshtml" />
     <Content Include="Views\Employee\Index.cshtml" />
     <Content Include="Views\Employee\Create.cshtml" />
     <Content Include="Views\Employee\Edit.cshtml" />
+    <Content Include="Views\Order\Order.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Images\" />
+    <Folder Include="Views\Logout\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

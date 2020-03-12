@@ -6,6 +6,9 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @{ 
+        var username = Session["Name"];
+    }
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -16,7 +19,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("C# MVC Learning", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -26,7 +29,18 @@
                     <li>@Html.ActionLink("Weather", "weatherForecast", "openWeatherMapMvc")</li>
                     <li>@Html.ActionLink("Database", "Index", "LearnDB")</li>
                     <li>@Html.ActionLink("CRUD", "Index", "Employee")</li>
-                    <li>@Html.ActionLink("Login", "LoginForm", "Login")</li>
+                    <li>@Html.ActionLink("Order", "OrderForm", "Order")</li>
+                    @if (username == null)
+                    {
+                        <li>@Html.ActionLink("Login", "Login", "Login")</li>
+                        <li>@Html.ActionLink("Register", "Create", "Employee")</li>
+                    }
+                    else
+                    {
+                         <li>@Html.ActionLink("Logout", "Index", "Logout")</li>
+                    }
+
+
                 </ul>
             </div>
         </div>
